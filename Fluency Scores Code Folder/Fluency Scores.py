@@ -39,7 +39,7 @@ def evaluate_fluency(texts):
     fluency_scores = []
     for i, text in enumerate(texts):
         try:
-            prompt = f"Rate the fluency of the following text on a scale of 1 to 10 and return only the number. Not 1 extra character other than a number: {text}"
+            prompt = f"Is the generated text well-written and grammatical? Rate the fluency of the following text on a scale of 1 to 10 and return only the number: {text}"
             response = openai.ChatCompletion.create(
                 model="gpt-4o",
                 messages=[
